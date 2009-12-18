@@ -1,8 +1,9 @@
 set smartindent
 set expandtab
 set shiftwidth=4
-set tabstop=4
+set softtabstop=4
 set winminheight=0
+set winminwidth=1
 filetype plugin on
 
 if has("gui_running")
@@ -13,19 +14,19 @@ else
 end
 
 " Window Bindings
-:noremap <C-H> <C-w>h
-:noremap <C-L> <C-w>l
-:noremap <C-J> <C-W>j<C-W>_
-:noremap <C-K> <C-W>k<C-W>_
-:noremap <C-S> :w<CR>
-:noremap <C-V> :vsplit<CR>
-:noremap <C-C> <C-W>c
+noremap <C-H> <C-w>h:vertical resize<CR>
+noremap <C-L> <C-w>l:vertical resize<CR>
+noremap <C-J> <C-W>j<C-W>_
+noremap <C-K> <C-W>k<C-W>_
+noremap <C-s> :w<CR>
+noremap <C-V> :vsplit<CR>
+noremap <C-C> <C-W>c
 
 " Compiler Bindings
 :noremap <C-F10> :make<CR>
 
 " NERDTree
-:noremap <C-n> :NERDTreeToggle<CR>
+:noremap <C-n> :NERDTreeToggle<CR>:vertical resize 20<CR>
 
 let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
