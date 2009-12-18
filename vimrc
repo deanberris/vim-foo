@@ -26,7 +26,7 @@ noremap <C-C> <C-W>c
 :noremap <C-F10> :make<CR>
 
 " NERDTree
-:noremap <C-n> :NERDTreeToggle<CR>:vertical resize 20<CR>
+:noremap <C-n> :NERDTreeToggle<CR>:vertical resize 30<CR>
 
 let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
