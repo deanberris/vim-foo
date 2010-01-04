@@ -5,8 +5,8 @@ set softtabstop=4
 set winminheight=0
 set winheight=50
 set winminwidth=1
-set winwidth=100
-set noequalalways
+set winwidth=1
+set equalalways
 filetype plugin on
 
 if has("gui_running")
@@ -18,8 +18,8 @@ else
 end
 
 " Window Bindings
-noremap <C-H> <C-w>h:vertical resize<CR>
-noremap <C-L> <C-w>l:vertical resize<CR>
+noremap <C-H> <C-w>h<C-w>|
+noremap <C-L> <C-w>l<C-w>|
 noremap <C-J> <C-W>j<C-W>_
 noremap <C-K> <C-W>k<C-W>_
 noremap <C-s> :w<CR>
@@ -34,4 +34,11 @@ noremap <C-C> <C-W>c
 
 let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
+let NERDTreeWinSize=50
+let NERDTreeWinPos="right"
+let NERDTreeQuitOnOpen=1
+
+" Folding
+set foldmethod=syntax
+set number
 
