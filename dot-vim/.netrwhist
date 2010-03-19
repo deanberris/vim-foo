@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/dean/Source/memcached-1.4.4'
-let g:netrw_dirhist_2='/home/dean/Source/LifeThread-Services/user/src/handlers'
-let g:netrw_dirhist_3='/home/dean/Source/cpp-netlib'
-let g:netrw_dirhist_4='/home/dean'
-let g:netrw_dirhist_5='/home/dean/Source/cpp-netlib'
-let g:netrw_dirhist_6='/home/dean/Source/cpp-netlib/boost'
-let g:netrw_dirhist_7='/home/dean/Source/cpp-netlib/boost/network'
-let g:netrw_dirhist_8='/home/dean/Source/cpp-netlib/boost/network/protocol'
-let g:netrw_dirhist_9='/home/dean/Source/cpp-netlib/boost/network/protocol/http'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/dean/Source/tornado/demos/blog'

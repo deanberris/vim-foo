@@ -20,9 +20,35 @@ snippet ns
 	} /* $1 */
 # Class
 snippet cl
-	struct ${1:`Filename('$1_t', 'name')`} {
+	struct ${1:`Filename('$1', 'name')`} {
 		$1 (${2:arguments});
 	private:
+		${3:/* data */}
+	};
+
+snippet clnc
+	struct ${1:`Filename('$1', 'name')`} {
+		$1 (${2:arguments});
+		~$1 () throw ();
+
+		void swap($1 & other); // swap function
+	private:
+		$1 & operator=($1 & rhs); // hidden assignment operator
+		$1 ($1 const & other); // hidden copy constructor
+
+		${3:/* data */}
+	};
+
+snippet clf
+	struct ${1:`Filename('$1', 'name')`} {
+		$1 (${2:arguments});
+		$1 ($1 const & other); // copy constructor
+		~$1 () throw ();
+
+		void swap($1 & other); // swap function
+		$1 & operator=($1 & rhs); // assignment operator
+	private:
+
 		${3:/* data */}
 	};
 
