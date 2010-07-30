@@ -18,13 +18,13 @@ else
 end
 
 " Window Bindings
-noremap <C-H> <C-w>h<C-w>|
-noremap <C-L> <C-w>l<C-w>|
-noremap <C-J> <C-W>j<C-W>_
-noremap <C-K> <C-W>k<C-W>_
+noremap <C-H> <C-w>h
+noremap <C-L> <C-w>l
+noremap <C-J> <C-W>j<C-W>_<ESC>
+noremap <C-K> <C-W>k<C-W>_<ESC>
 noremap <C-s> :w<CR>
-noremap <C-V> :vsplit<CR>
 noremap <C-C> <C-W>c
+noremap <C-m> <C-W><Bar>
 
 " Compiler Bindings
 :noremap <C-F10> :make<CR>
