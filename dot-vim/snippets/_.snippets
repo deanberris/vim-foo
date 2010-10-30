@@ -2,6 +2,11 @@
 
 # (c) holds no legal value ;)
 snippet c)
-	`&enc[:2] == "utf" ? "©" : "(c)"` Copyright `strftime("%Y")` ${1:`g:snips_author`}. All Rights Reserved.${2}
+	// Copyright `strftime("%Y")` ${1:`g:snips_author`}. ${2}
 snippet date
 	`strftime("%Y-%m-%d")`
+snippet bsl
+	// Distributed under the Boost Software License, Version 1.0.
+	// (See accompanying file LICENSE_1_0.txt or copy at
+	// http://www.boost.org/LICENSE_1_0.txt)
+
