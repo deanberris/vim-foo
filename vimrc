@@ -22,12 +22,14 @@ noremap <C-H> <C-w>h
 noremap <C-L> <C-w>l
 noremap <C-J> <C-W>j<C-W>_<ESC>
 noremap <C-K> <C-W>k<C-W>_<ESC>
-noremap <C-s> :w<CR>
+noremap <Leader>s :w<CR>
 noremap <C-C> <C-W>c
 noremap <C-m> <C-W><Bar>
+noremap <Leader>f :FufFile<CR>
+noremap <C-x> :q!<CR>
 
 " Compiler Bindings
-:noremap <C-F10> :make<CR>
+:noremap <C-F10> :new +r!make<CR><CR>
 
 " NERDTree
 :noremap <C-n> :NERDTreeToggle<CR>
