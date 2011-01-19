@@ -29,7 +29,9 @@ noremap <Leader>f :FufFile<CR>
 noremap <C-x> :q!<CR>
 
 " Compiler Bindings
-:noremap <C-F10> :new +r!make<CR><CR>
+:noremap <C-F10> :make<CR>
+:noremap <F3> :cp<CR>
+:noremap <F4> :cn<CR>
 
 " NERDTree
 :noremap <C-n> :NERDTreeToggle<CR>
@@ -39,6 +41,7 @@ let NERDTreeMouseMode=1
 let NERDTreeWinSize=50
 let NERDTreeWinPos="right"
 let NERDTreeQuitOnOpen=1
+let g:snips_author="Dean Michael Berris &lt;mikhailberis@gmail.com&gt;"
 
 " Folding
 set foldmethod=syntax
