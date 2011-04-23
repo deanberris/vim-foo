@@ -44,6 +44,7 @@ let NERDTreeQuitOnOpen=1
 let g:snips_author="Dean Michael Berris &lt;mikhailberis@gmail.com&gt;"
 
 " Folding
+syntax on
 set foldmethod=syntax
 set number
 
