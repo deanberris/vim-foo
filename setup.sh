@@ -12,9 +12,17 @@ if [ -d $HOME/.vim ]; then
 fi
 ln -s $CWD/dot-vim ~/.vim
 
+# Install YCM -- this may take a while.
+cd $CWD/dot-vim/bundle/YouCompleteMe && ./install.sh --clang-completer && cd $CWD
+
 if [ -e $HOME/.vimrc ]; then
     echo "Moving existing ~/.vimrc to ~/.vimrc-old"
     mv ~/.vimrc ~/.vimrc-old
 fi
 ln -s $CWD/vimrc ~/.vimrc
 
+# Set up the Vundle bundles.
+vim +BundleInstall +qall
+
+# Set up the pathogen bundles.
+vim +Helptags +qall
