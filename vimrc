@@ -1,50 +1,60 @@
+set nocompatible
+filetype on
+filetype off
+
+execute pathogen#infect()
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'Raimondi/delimitMate'
+Bundle 'scrooloose/nerdtree'
+Bundle 'SirVer/ultisnips'
+
 set smartindent
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set winminheight=0
-set winheight=50
-set winminwidth=1
-set winwidth=1
 set equalalways
-filetype plugin on
+set number
+
+filetype plugin indent on
+syntax on
 
 if has("gui_running")
     set guioptions-=T
-    colorscheme pablo
-    set lines=43 columns=240
+    :colorscheme pablo
 else
-    colorscheme slate
+    :colorscheme torte
 end
 
 " Window Bindings
-noremap <C-H> <C-w>h
-noremap <C-L> <C-w>l
-noremap <C-J> <C-W>j<C-W>_<ESC>
-noremap <C-K> <C-W>k<C-W>_<ESC>
 noremap <Leader>s :w<CR>
 noremap <C-C> <C-W>c
-noremap <C-m> <C-W><Bar>
 noremap <Leader>f :FufFile<CR>
-noremap <C-x> :q!<CR>
 
 " Compiler Bindings
-:noremap <C-F10> :make<CR>
-:noremap <F3> :cp<CR>
-:noremap <F4> :cn<CR>
+noremap <Leader>bb :make<CR>
+noremap <Leader>bn :cn<CR>
+noremap <Leader>bp :cp<CR>
 
 " NERDTree
-:noremap <C-n> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 
 let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
 let NERDTreeWinSize=50
 let NERDTreeWinPos="right"
 let NERDTreeQuitOnOpen=1
-let g:snips_author="Dean Michael Berris &lt;mikhailberis@gmail.com&gt;"
 
-" Folding
-syntax on
-set foldmethod=syntax
-set number
+" Clang-format
+map <C-Y> :pyf ~/.vim/clang-format.py<CR>
+imap <C-Y> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 
+" Syntastic
+let g:syntastic_enable_highlighting=1
+let g:syntastic_auto_loc_list=1
