@@ -4,3 +4,6 @@
 [submodule "dot-vim/bundle/syntastic"]
 	path = dot-vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "dot-vim/bundle/ultisnips"]
+	path = dot-vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips
